@@ -1,3 +1,5 @@
+from stats import get_word_num
+
 def main():
     book = (get_book_text("books/frankenstein.txt"))
     words = (get_word_num(book))
@@ -7,8 +9,5 @@ def get_book_text(bookfile):
     with open(bookfile) as f:
         book = f.read()
         return book
-
-def get_word_num(book):
-     return len(book.split())
 
 main()
