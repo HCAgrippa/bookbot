@@ -4,12 +4,10 @@ def get_word_num(book):
 def get_char_count(book):
      lc_book = book.lower()
      char_dic = {}
-     char_set = set()
      for char in lc_book:
-         if char in char_set:
+         if char in char_dic:
              char_dic[char] += 1
          else:
-             char_set.add(char)
              char_dic[char] = 1
      return char_dic
 
