@@ -11,12 +11,13 @@ def get_char_count(book):
             char_dic[char] = 1
     return char_dic
 
+def sort_key(dic):
+    return dic["num"]
+
 def get_sorted_char_list(char_dic):
     sorted_char_list = []
     for char in char_dic:
         if char.isalpha and char != " " and char != "\n":
             sorted_char_list.append({"char": char, "num": char_dic[char]})
-    def sort_key(dic):
-        return dic["num"]
     sorted_char_list.sort(reverse=True, key=sort_key)
     return sorted_char_list
